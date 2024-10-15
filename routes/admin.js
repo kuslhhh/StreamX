@@ -1,6 +1,6 @@
 const {Router} = require ("express")
 const adminRouter = Router();
-
+const {adminModel} = require("../db")
 
     adminRouter.post("/signup", (req, res) => {
         res.json({
@@ -14,19 +14,19 @@ const adminRouter = Router();
         })
     })
 
-    adminRouter.post("/course", (req, res) => {
+    adminRouter.post("/", (req, res) => {
         res.json({
             message: "admin can add course"
         })
     })
 
-    adminRouter.put("/course", (req, res) => {
+    adminRouter.put("/", (req, res) => {
         res.json({
             message: "admin can update course"
         })
     })
 
-    adminRouter.get("/course", (req, res) => {
+    adminRouter.get("/bulk", (req, res) => {
         res.json({
             message: "admin can view course"
         })
